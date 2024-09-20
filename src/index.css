@@ -47,6 +47,10 @@ body {
     @apply flex gap-4 items-center justify-center cursor-pointer p-3 rounded-md bg-black-300  transition-all active:scale-95 text-white mx-auto;
   }
 
+  .hero_tag{
+    @apply text-center xl:text-6xl  md:text-5xl sm:text-4xl text-3xl font-generalsans font-black !leading-normal
+  }
+
 
   /*  footer */
   .social-icon {
