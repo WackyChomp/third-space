@@ -1,4 +1,5 @@
 import React from 'react'
+import { PerspectiveCamera } from '@react-three/drei'
 
 type Props = {}
 
@@ -12,6 +13,12 @@ const Hero = (props: Props) => {
         <p className='hero_tag text-green-500'>
           Transfrom Ideas & Visions
         </p>
+      </div>
+
+      <div className="w-full h-full absolute inset-0">
+        <canvas className='w-full h-full'>
+          <PerspectiveCamera makeDefault position={[0, 0, 30]}/>
+        </canvas>
       </div>
     </section>
   )
