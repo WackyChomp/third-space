@@ -1,5 +1,7 @@
-import React from 'react'
+import { Suspense } from 'react'
 import { PerspectiveCamera } from '@react-three/drei'
+import CanvasLoader from '../components/CanvasLoader'
+import { heroModel } from '../components/heroModel'
 
 type Props = {}
 
@@ -17,7 +19,11 @@ const Hero = (props: Props) => {
 
       <div className="w-full h-full absolute inset-0">
         <canvas className='w-full h-full'>
+          <Suspense fallback={CanvasLoader}>
+
           <PerspectiveCamera makeDefault position={[0, 0, 30]}/>
+          <heroModel />
+          </Suspense>
         </canvas>
       </div>
     </section>
