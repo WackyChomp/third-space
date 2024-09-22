@@ -9,8 +9,10 @@ Title: King black dragon
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
-const heroModel = (props) => {
-  const { nodes, materials } = useGLTF('/scene.gltf')
+const HeroModel = (props) => {
+  const { nodes, materials } = useGLTF('/models/scene.glb')
+//  const { nodes, materials } = useGLTF('/models/scene.gltf')
+//  const { nodes, materials } = useGLTF('/scene.gltf')
   return (
     <group {...props} dispose={null}>
       <group position={[-0.012, 0.02, 0]} rotation={[-Math.PI / 2, 0, 0]}>
@@ -132,6 +134,8 @@ const heroModel = (props) => {
   )
 }
 
-useGLTF.preload('/scene.gltf')
+useGLTF.preload('/models/scene.glb')
+//useGLTF.preload('/models/scene.gltf')
+//useGLTF.preload('/scene.gltf')
 
-export default heroModel;
+export default HeroModel;
