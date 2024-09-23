@@ -2,11 +2,54 @@ import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { PerspectiveCamera } from '@react-three/drei'
 import CanvasLoader from '../components/CanvasLoader'
-import HeroModel from '../components/HeroModel.jsx'
+import HeroModel from '../components/HeroModel'
+import { Leva, useControls } from 'leva'
 
 type Props = {}
 
 const Hero = (props: Props) => {
+
+  const x = useControls(
+    'HeroModel',
+    {
+      scale:{
+        value: 1,
+        min: 2,
+        max: 10,
+      },
+      positionX: {
+        value: 2.5,
+        min: -10,
+        max: 10,
+      },
+      positionY: {
+        value: 2.5,
+        min: -10,
+        max: 10,
+      },
+      positionZ: {
+        value: 2.5,
+        min: -10,
+        max: 10,
+      },
+      rotationX:{
+        value: 0,
+        min: -10,
+        max: 10,
+      },
+      rotationY:{
+        value: 0,
+        min: -10,
+        max: 10,
+      },
+      rotationZ:{
+        value: 0,
+        min: -10,
+        max: 10,
+      },
+    }
+  )
+
   return (
     <section className="min-h-screen">
       <div className="text-red-500 w-full mx-auto flex flex-col sm:mt-22 mt-20 c-space gap-5">
@@ -19,15 +62,23 @@ const Hero = (props: Props) => {
       </div>
 
       <div className="w-full h-full absolute inset-0">
+        <Leva />
+
         <Canvas className='w-full h-full'>
           <Suspense fallback={<CanvasLoader />}>
 
           <PerspectiveCamera makeDefault position={[0, 0, 30]}/>
 
           <HeroModel 
-            scale={0.5} 
-            position={[0, 0, 0]}
+            scale={3.76} 
+            position={[-0.9, -2.3, 2.5]}
             rotation={[0, -Math.PI / 2, 0]}
+            //scale={[x.scale, x.scale, x.scale]}
+            //position={[x.positionX, x.positionY, x.positionZ]}
+            //rotation={[x.rotationX, x.rotationY, x.rotationZ]}
+            //scale={3} 
+            //position={[0, 0, 0]}
+            //rotation={[0, -Math.PI / 2, 0]}
           />
 
           <ambientLight intensity={1} />
