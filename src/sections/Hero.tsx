@@ -4,10 +4,16 @@ import { PerspectiveCamera } from '@react-three/drei'
 import CanvasLoader from '../components/CanvasLoader'
 import HeroModel from '../components/HeroModel'
 import { Leva, useControls } from 'leva'
+import { useMediaQuery } from 'react-responsive'
+import Target from '../components/Target'
 
 type Props = {}
 
 const Hero = (props: Props) => {
+
+  const isSmall = useMediaQuery({ maxWidth:450 })
+  const isMobile = useMediaQuery({ maxWidth:768 })
+  const isTablet = useMediaQuery({ minWidth:768, maxWidth:1024 })
 
   const x = useControls(
     'HeroModel',
@@ -68,9 +74,10 @@ const Hero = (props: Props) => {
           <Suspense fallback={<CanvasLoader />}>
 
           <PerspectiveCamera makeDefault position={[0, 0, 30]}/>
+          {/* PerspectiveCamera - lowering z-position increases model size */}
 
           <HeroModel 
-            scale={3.76} 
+            scale={isMobile ? 1.7 : 3.76} 
             position={[-0.9, -2.3, 2.5]}
             rotation={[0, -Math.PI / 2, 0]}
             //scale={[x.scale, x.scale, x.scale]}
@@ -80,6 +87,14 @@ const Hero = (props: Props) => {
             //position={[0, 0, 0]}
             //rotation={[0, -Math.PI / 2, 0]}
           />
+          
+          <group>
+            <Target 
+              scale={2}
+              position={[-10, -6.5, 6.1]}
+              rotation={[0, 1.1, 0]}
+            />
+          </group>
 
           <ambientLight intensity={1} />
           <directionalLight position={[10, 10, 10]} intensity={0.5} />
