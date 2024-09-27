@@ -2,10 +2,11 @@ import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { PerspectiveCamera } from '@react-three/drei'
 import CanvasLoader from '../components/CanvasLoader'
-import HeroModel from '../components/HeroModel'
 import { Leva, useControls } from 'leva'
 import { useMediaQuery } from 'react-responsive'
+import HeroModel from '../components/HeroModel'
 import Target from '../components/Target'
+import ReactLogo from '../components/ReactLogo'
 
 type Props = {}
 
@@ -93,6 +94,12 @@ const Hero = (props: Props) => {
               scale={2}
               position={[-10, -6.5, 6.1]}
               rotation={[0, 1.1, 0]}
+            />
+
+            <ReactLogo 
+              scale={1.5}
+              position={[14, -8, 0]}
+              rotation={[0, 1.7, 0]}
             />
           </group>
 
