@@ -7,6 +7,7 @@ import { useMediaQuery } from 'react-responsive'
 import HeroModel from '../components/HeroModel'
 import Target from '../components/Target'
 import ReactLogo from '../components/ReactLogo'
+import RubixCube from '../components/RubixCube'
 
 type Props = {}
 
@@ -98,7 +99,13 @@ const Hero = (props: Props) => {
 
             <ReactLogo 
               scale={1.5}
-              position={[14, -8, 0]}
+              position={[18, -7, 0]}
+              rotation={[0, 1.7, 0]}
+            />
+
+            <RubixCube 
+              scale={9}
+              position={[-37, 7, -20]}
               rotation={[0, 1.7, 0]}
             />
           </group>
