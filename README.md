@@ -34,6 +34,24 @@ Here are some frameworks/libraries used in this project:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments 🌟🤗🌟
+
+List of incredible resources that drive inspiration or point you into a direction:
+
+* [Choose an Open Source License](https://choosealicense.com)
+* [Emojipedia 😱](https://emojipedia.org/smileys)
+* [Font Awesome](https://fontawesome.com)
+<br><br>
+* [Vite](https://vitejs.dev/) - React Project Template
+* [Tailwind CSS](https://tailwindcss.com/docs/installation) - CSS framework
+* [GSAP](https://gsap.com/docs/v3/) - JavaScript Animation Library
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [TypeScript]: https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white

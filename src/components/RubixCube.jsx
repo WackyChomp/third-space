@@ -6,14 +6,39 @@ Source: https://sketchfab.com/3d-models/rubix-cube-8c9a5d13325b4923baac1bf038a01
 Title: Rubix Cube
 */
 
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import { useRef, useState } from 'react'
+import { useGLTF, Float } from '@react-three/drei'
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
 
 const RubixCube = (props) => {
   const { nodes, materials } = useGLTF('/models/rubix_cube.glb')
+  const cubeRef = useRef();
+  const [hovered, setHovered] = useState(false);
+
+  useGSAP(()=> {
+    gsap
+      .timeline({
+        repeat: -1,
+        repeatDelay: 0.5,
+      })
+      .to(cubeRef.current.rotation, {
+        x: hovered ? '+=2' : `+=${Math.PI * 2}`,
+        y: hovered ? '+=2' : `+=${Math.PI * 2}`,
+        duration: 15,
+        stagger: {
+          each: 0.15,
+        }
+      })
+  })
+
   return (
-    <group {...props} dispose={null}>
-      <group scale={0.065}>
+    <Float floatIntensity={2}>
+      <group 
+        ref={cubeRef} 
+        onPointerEnter={() => setHovered(true)} 
+        scale={0.002} {...props} dispose={null}
+      >
         <mesh
           castShadow
           receiveShadow
@@ -57,7 +82,7 @@ const RubixCube = (props) => {
           material={materials['Material.007']}
         />
       </group>
-    </group>
+    </Float>
   )
 }
 

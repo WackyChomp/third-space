@@ -93,7 +93,7 @@ const Hero = (props: Props) => {
           <group>
             <Target 
               scale={2}
-              position={[-10, -6.5, 6.1]}
+              position={[-17, -6.5, 6.1]}
               rotation={[0, 1.1, 0]}
             />
 
@@ -104,7 +104,7 @@ const Hero = (props: Props) => {
             />
 
             <RubixCube 
-              scale={9}
+              scale={.7}
               position={[-37, 7, -20]}
               rotation={[0, 1.7, 0]}
             />
