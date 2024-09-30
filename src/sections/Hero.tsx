@@ -8,6 +8,7 @@ import HeroModel from '../components/HeroModel'
 import Target from '../components/Target'
 import ReactLogo from '../components/ReactLogo'
 import RubixCube from '../components/RubixCube'
+import Banana from '../components/Banana'
 
 type Props = {}
 
@@ -107,6 +108,11 @@ const Hero = (props: Props) => {
               scale={.7}
               position={[-37, 7, -20]}
               rotation={[0, 1.7, 0]}
+            />
+            <Banana
+              scale={4}
+              position={[35, 7, -20]}
+              rotation={[0, 1.6, 0]}
             />
           </group>
 
