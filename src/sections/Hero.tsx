@@ -9,6 +9,7 @@ import Target from '../components/Target'
 import ReactLogo from '../components/ReactLogo'
 import RubixCube from '../components/RubixCube'
 import Banana from '../components/Banana'
+import Rings from '../components/Rings'
 
 type Props = {}
 
@@ -110,6 +111,12 @@ const Hero = (props: Props) => {
               rotation={[0, 1.7, 0]}
             />
             <Banana
+              scale={4}
+              position={[35, 7, -20]}
+              rotation={[0, 1.6, 0]}
+            />
+
+            <Rings
               scale={4}
               position={[35, 7, -20]}
               rotation={[0, 1.6, 0]}
