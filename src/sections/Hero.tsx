@@ -10,6 +10,7 @@ import ReactLogo from '../components/ReactLogo'
 import RubixCube from '../components/RubixCube'
 import Banana from '../components/Banana'
 import Rings from '../components/Rings'
+import ComputerMonitor from '../components/ComputerMonitor'
 
 type Props = {}
 
@@ -100,8 +101,8 @@ const Hero = (props: Props) => {
             />
 
             <ReactLogo 
-              scale={1.5}
-              position={[18, -7, 0]}
+              scale={1.3}
+              position={[20, -7, 0]}
               rotation={[0, 1.7, 0]}
             />
 
@@ -120,6 +121,12 @@ const Hero = (props: Props) => {
               scale={4}
               position={[35, 7, -20]}
               rotation={[0, 1.6, 0]}
+            />
+
+            <ComputerMonitor 
+              scale={1.2}
+              position={[15, -8, -13]}
+              rotation={[0, 15, 0]}
             />
           </group>
 
