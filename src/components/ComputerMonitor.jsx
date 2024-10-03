@@ -7,10 +7,13 @@ Title: Retro Computer Monitor
 */
 
 import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import { useGLTF, useTexture } from '@react-three/drei'
 
 const ComputerMonitor = (props) => {
   const { nodes, materials } = useGLTF('/models/retro_computer_monitor.glb')
+
+  const monitorTexture = useTexture('https://c.tenor.com/x8v1oNUOmg4AAAAd/tenor.gif')
+
   return (
     <group {...props} dispose={null}>
       <group position={[-3.199, 0, 5.594]} rotation={[0, Math.PI / 2 ,0]} scale={0.02}>
@@ -21,8 +24,9 @@ const ComputerMonitor = (props) => {
             geometry={nodes.Plane__0.geometry}
             material={materials.Plane__0}
             position={[88.238, 166.36, 0]}
-            scale={1.055}
-          />
+            scale={1.055}>
+            <meshMatcapMaterial map={monitorTexture} />
+          </mesh>
           <mesh
             castShadow
             receiveShadow
