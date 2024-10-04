@@ -4,6 +4,7 @@ import { PerspectiveCamera } from '@react-three/drei'
 import CanvasLoader from '../components/CanvasLoader'
 import { Leva, useControls } from 'leva'
 import { useMediaQuery } from 'react-responsive'
+import HeroCamera from '../components/HeroCamera'
 import HeroModel from '../components/HeroModel'
 import Target from '../components/Target'
 import ReactLogo from '../components/ReactLogo'
@@ -81,18 +82,20 @@ const Hero = (props: Props) => {
           <PerspectiveCamera makeDefault position={[0, 0, 30]}/>
           {/* PerspectiveCamera - lowering z-position increases model size */}
 
-          <HeroModel 
-            scale={isMobile ? 1.7 : 3.76} 
-            position={[-0.9, -2.3, 2.5]}
-            rotation={[0, -Math.PI / 2, 0]}
-            //scale={[x.scale, x.scale, x.scale]}
-            //position={[x.positionX, x.positionY, x.positionZ]}
-            //rotation={[x.rotationX, x.rotationY, x.rotationZ]}
-            //scale={3} 
-            //position={[0, 0, 0]}
-            //rotation={[0, -Math.PI / 2, 0]}
-          />
-          
+          <HeroCamera isMobile={isMobile}>
+            <HeroModel 
+              scale={isMobile ? 1.7 : 3.76} 
+              position={[-0.9, -2.3, 2.5]}
+              rotation={[0, -Math.PI / 2, 0]}
+              //scale={[x.scale, x.scale, x.scale]}
+              //position={[x.positionX, x.positionY, x.positionZ]}
+              //rotation={[x.rotationX, x.rotationY, x.rotationZ]}
+              //scale={3} 
+              //position={[0, 0, 0]}
+              //rotation={[0, -Math.PI / 2, 0]}
+            />          
+          </HeroCamera>
+
           <group>
             <Target 
               scale={2}
