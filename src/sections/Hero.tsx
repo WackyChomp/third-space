@@ -12,6 +12,7 @@ import RubixCube from '../components/RubixCube'
 import Banana from '../components/Banana'
 import Rings from '../components/Rings'
 import ComputerMonitor from '../components/ComputerMonitor'
+import Button from '../components/Button'
 
 type Props = {}
 
@@ -138,6 +139,16 @@ const Hero = (props: Props) => {
 
           </Suspense>
         </Canvas>
+      </div>
+
+      <div className="absolute bottom-10 left-0 right-0 w-full z-10 c-space">
+        <a href="#contact" className='w-fit'>
+          <Button 
+            name="Let's Collaborate!"
+            isBeam
+            containerClass='sm:w-fit w-full sm:min-w-96'
+          />
+        </a>
       </div>
 
     </section>
