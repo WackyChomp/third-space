@@ -13,6 +13,7 @@ import Banana from '../components/Banana'
 import Rings from '../components/Rings'
 import ComputerMonitor from '../components/ComputerMonitor'
 import Button from '../components/Button'
+import { calculateSizes } from '../constants'
 
 type Props = {}
 
@@ -21,6 +22,8 @@ const Hero = (props: Props) => {
   const isSmall = useMediaQuery({ maxWidth:450 })
   const isMobile = useMediaQuery({ maxWidth:768 })
   const isTablet = useMediaQuery({ minWidth:768, maxWidth:1024 })
+
+  const sizes = calculateSizes(isSmall, isMobile, isTablet)
 
   const x = useControls(
     'HeroModel',
@@ -99,37 +102,37 @@ const Hero = (props: Props) => {
 
           <group>
             <Target 
-              scale={2}
-              position={[-17, -6.5, 6.1]}
+              scale={sizes.targetScale}
+              position={sizes.targetPosition}
               rotation={[0, 1.1, 0]}
             />
 
             <ReactLogo 
               scale={1.3}
-              position={[20, -7, 0]}
+              position={sizes.reactLogoPosition}
               rotation={[0, 1.7, 0]}
             />
 
             <RubixCube 
               scale={.7}
-              position={[-37, 7, -20]}
+              position={sizes.rubixCubePosition}
               rotation={[0, 1.7, 0]}
             />
             <Banana
               scale={4}
-              position={[35, 7, -20]}
+              position={sizes.bananaPosition}
               rotation={[0, 1.6, 0]}
             />
 
             <Rings
               scale={4}
-              position={[35, 7, -20]}
+              position={sizes.ringsPosition}
               rotation={[0, 1.6, 0]}
             />
 
             <ComputerMonitor 
               scale={1.2}
-              position={[15, -8, -13]}
+              position={sizes.computerMonitorPosition}
               rotation={[0, 15, 0]}
             />
           </group>
