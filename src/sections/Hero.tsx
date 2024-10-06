@@ -25,46 +25,18 @@ const Hero = (props: Props) => {
 
   const sizes = calculateSizes(isSmall, isMobile, isTablet)
 
-  const x = useControls(
-    'HeroModel',
-    {
-      scale:{
-        value: 1,
-        min: 2,
-        max: 10,
-      },
-      positionX: {
-        value: 2.5,
-        min: -10,
-        max: 10,
-      },
-      positionY: {
-        value: 2.5,
-        min: -10,
-        max: 10,
-      },
-      positionZ: {
-        value: 2.5,
-        min: -10,
-        max: 10,
-      },
-      rotationX:{
-        value: 0,
-        min: -10,
-        max: 10,
-      },
-      rotationY:{
-        value: 0,
-        min: -10,
-        max: 10,
-      },
-      rotationZ:{
-        value: 0,
-        min: -10,
-        max: 10,
-      },
-    }
-  )
+  // const x = useControls(
+  //   'HeroModel',
+  //   {
+  //     scale:{ value: 1, min: 2, max: 10,},
+  //     positionX: { value: 2.5, min: -10, max: 10,},
+  //     positionY: { value: 2.5, min: -10, max: 10,},
+  //     positionZ: { value: 2.5, min: -10, max: 10,},
+  //     rotationX:{ value: 0, min: -10, max: 10,},
+  //     rotationY:{ value: 0, min: -10, max: 10,},
+  //     rotationZ:{ value: 0, min: -10, max: 10,},
+  //   }
+  // )
 
   return (
     <section className="min-h-screen">
@@ -88,8 +60,8 @@ const Hero = (props: Props) => {
 
           <HeroCamera isMobile={isMobile}>
             <HeroModel 
-              scale={isMobile ? 1.7 : 3.76} 
-              position={[-0.9, -2.3, 2.5]}
+              scale={sizes.heroModelScale}     // isMobile ? 1.7 : 3.76
+              position={sizes.heroModelPosition}      // [-0.9, -2.3, 2.5]
               rotation={[0, -Math.PI / 2, 0]}
               //scale={[x.scale, x.scale, x.scale]}
               //position={[x.positionX, x.positionY, x.positionZ]}
@@ -102,36 +74,36 @@ const Hero = (props: Props) => {
 
           <group>
             <Target 
-              scale={sizes.targetScale}
+              scale={sizes.targetScale}               // 2
               position={sizes.targetPosition}
               rotation={[0, 1.1, 0]}
             />
 
             <ReactLogo 
-              scale={1.3}
+              scale={sizes.reactLogoScale}               // 1.3
               position={sizes.reactLogoPosition}
               rotation={[0, 1.7, 0]}
             />
 
             <RubixCube 
-              scale={.7}
+              scale={sizes.rubixCubeScale}               // 0.7
               position={sizes.rubixCubePosition}
               rotation={[0, 1.7, 0]}
             />
             <Banana
-              scale={4}
+              scale={sizes.bananaScale}               // 4
               position={sizes.bananaPosition}
               rotation={[0, 1.6, 0]}
             />
 
             <Rings
-              scale={4}
+              scale={sizes.ringsScale}               // 4
               position={sizes.ringsPosition}
               rotation={[0, 1.6, 0]}
             />
 
             <ComputerMonitor 
-              scale={1.2}
+              scale={sizes.computerMonitorScale}             // 1.2
               position={sizes.computerMonitorPosition}
               rotation={[0, 15, 0]}
             />
