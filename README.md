@@ -4,7 +4,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center" id='readme-top'>
-  <img src="https://i.gifer.com/embedded/download/Eypk.gif" alt="Logo" target='blank' width="300" height="300">
+  <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/9eb17441995087.57bd5060d2bd5.gif" alt="Logo" target='blank' width="370" height="230">
 
   <h3 align="center">Digital Corner of the Interweb</h3>
 
@@ -23,6 +23,19 @@
 </div>
 
 
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="#built-with">Built With</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#"></a></li>
+    <li><a href="#"></a></li>
+  </ol>
+</details>
+
+
 <!-- BUILT WITH -->
 ## Built With
 Here are some frameworks/libraries used in this project:
@@ -36,9 +49,8 @@ Here are some frameworks/libraries used in this project:
 
 
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments 🌟🤗🌟
-
-List of incredible resources that drive inspiration or point you into a direction:
+## Acknowledgments
+🌟🤗🌟 List of incredible resources that drive inspiration or point you into a direction:
 
 * [Choose an Open Source License](https://choosealicense.com)
 * [Emojipedia 😱](https://emojipedia.org/smileys)

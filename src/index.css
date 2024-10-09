@@ -59,7 +59,19 @@ body {
   }
 
 
-  /*  footer */
+  /*  About */
+  .grid-container{
+    @apply w-full h-full border border-black-300 bg-red-900 rounded-lg sm:p-5 p-8 flex-col gap-5;
+  }
+  .grid-headtext{
+    @apply text-xl font-semibold mb-2.5 flex justify-center text-white font-generalsans;
+  }
+  .grid-subtext{
+    @apply text-[#afb0b6] text-base font-generalsans;
+  }
+
+
+  /*  Footer */
   .social-icon {
     @apply w-12 h-12 rounded-full flex justify-center items-center bg-black-300 border border-black-200;
   }
