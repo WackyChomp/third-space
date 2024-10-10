@@ -70,6 +70,9 @@ body {
     @apply text-[#afb0b6] text-base font-generalsans;
   }
 
+  .copy-container{
+    @apply cursor-pointer flex justify-center items-center gap-2;
+  }
 
   /*  Footer */
   .social-icon {
