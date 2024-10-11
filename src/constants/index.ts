@@ -27,6 +27,7 @@ export const navLinks = [
   // }
 ]
 
+/* ------------------------------------------------------------------ */
 
 export const calculateSizes = (isSmall, isMobile, isTablet) => {
   return{
@@ -59,3 +60,81 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
 
   }
 }
+
+/* ------------------------------------------------------------------ */
+
+export const myProjects = [
+  {
+    title: 'Title 1 - Fun Explosives & Reactions',
+    desc: 'lorem is the way of life if you get lost after some time',
+    href: 'https://www.google.com/',
+    texture: 'https://i.pinimg.com/originals/4b/43/8e/4b438ee0dac5bd54380a5fa530ccdee0.gif',
+    logo: 'https://img.icons8.com/color/100/fire-element--v1.png',
+    logoStyle: {
+      backgroundColor: '#2A1816',
+      border: '0.2px solid #36201D',
+      boxShadow: '0px 0px 60px 0px #AA3C304D',
+    },
+    spotlight: 'https://svgsilh.com/svg/147742.svg',
+    tags: [
+      {
+        id: 1,
+        name: 'React.js',
+        path: 'https://img.icons8.com/plasticine/100/react.png',
+      },
+      {
+        id: 2,
+        name: 'TailwindCSS',
+        path: 'https://img.icons8.com/plasticine/100/tailwind_css.png',
+      },
+      {
+        id: 3,
+        name: 'TypeScript',
+        path: 'https://img.icons8.com/color/100/typescript.png',
+      },
+      {
+        id: 4,
+        name: 'Tuttle',
+        path: 'https://img.icons8.com/clouds/100/turtle.pn',
+      },
+    ],
+  },
+  {
+    title: 'Title 2 - Happy Little Critters',
+    desc: 'lorem is the way of life if you get lost after some time',
+    href: 'https://www.google.com/',
+    texture: 'https://i.chzbgr.com/full/8439451648/hEAF08C90/lemur-wants-to-hug-bunnies',
+    logo: 'https://img.icons8.com/fluency/48/dog-footprint.png',
+    logoStyle: {
+      backgroundColor: '#2A1816',
+      border: '0.2px solid #36201D',
+      boxShadow: '0px 0px 60px 0px #AA3C304D',
+    },
+    spotlight: '',
+    tags: [
+      {
+        id: 1,
+        name: 'React.js',
+        path: 'https://img.icons8.com/plasticine/100/react.png',
+      },
+      {
+        id: 2,
+        name: 'TailwindCSS',
+        path: 'https://img.icons8.com/plasticine/100/tailwind_css.png',
+      },
+      {
+        id: 3,
+        name: 'TypeScript',
+        path: 'https://img.icons8.com/color/100/typescript.png',
+      },
+      {
+        id: 4,
+        name: 'Tuttle',
+        path: 'https://img.icons8.com/clouds/100/turtle.pn',
+      },
+    ],
+  },
+  {},
+  {},
+  {},
+]

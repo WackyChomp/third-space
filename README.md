@@ -4,7 +4,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center" id='readme-top'>
-  <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/9eb17441995087.57bd5060d2bd5.gif" alt="Logo" target='blank' width="370" height="230">
+  <img src="https://i.postimg.cc/sx7tGpmd/9eb17441995087-57bd5060d2bd5.gif" alt="Logo" target='blank' width="370" height="230">
 
   <h3 align="center">Digital Corner of the Interweb</h3>
 
