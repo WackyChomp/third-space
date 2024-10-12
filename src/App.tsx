@@ -10,7 +10,7 @@ const App = (props: Props) => {
 
 
   return (
-    <main className='bg-purple-800'>
+    <main className='bg-purple-900'>
       <Navbar />
       <Hero />
       <About />

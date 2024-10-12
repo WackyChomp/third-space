@@ -67,6 +67,7 @@ export const myProjects = [
   {
     title: 'Title 1 - Fun Explosives & Reactions',
     desc: 'lorem is the way of life if you get lost after some time',
+    subdesc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci sequi, eos nesciunt aliquam minima porro necessitatibus, quo ut totam accusantium facere suscipit voluptatem. Delectus porro ad odio doloremque aliquid mollitia fugit et dolorem ut aliquam laborum omnis, quidem corporis non nobis, vero adipisci nostrum totam quasi incidunt! Debitis, quis cus.`,
     href: 'https://www.google.com/',
     texture: 'https://i.pinimg.com/originals/4b/43/8e/4b438ee0dac5bd54380a5fa530ccdee0.gif',
     logo: 'https://img.icons8.com/color/100/fire-element--v1.png',
@@ -95,13 +96,14 @@ export const myProjects = [
       {
         id: 4,
         name: 'Tuttle',
-        path: 'https://img.icons8.com/clouds/100/turtle.pn',
+        path: 'https://img.icons8.com/clouds/100/turtle.png',
       },
     ],
   },
   {
     title: 'Title 2 - Happy Little Critters',
     desc: 'lorem is the way of life if you get lost after some time',
+    subdesc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci sequi, eos nesciunt aliquam minima porro necessitatibus, quo ut totam accusantium facere suscipit voluptatem. Delectus porro ad odio doloremque aliquid mollitia fugit et dolorem ut aliquam laborum omnis, quidem corporis non nobis, vero adipisci nostrum totam quasi incidunt! Debitis, quis cus.`,
     href: 'https://www.google.com/',
     texture: 'https://i.chzbgr.com/full/8439451648/hEAF08C90/lemur-wants-to-hug-bunnies',
     logo: 'https://img.icons8.com/fluency/48/dog-footprint.png',
@@ -130,7 +132,7 @@ export const myProjects = [
       {
         id: 4,
         name: 'Tuttle',
-        path: 'https://img.icons8.com/clouds/100/turtle.pn',
+        path: 'https://img.icons8.com/clouds/100/turtle.png',
       },
     ],
   },

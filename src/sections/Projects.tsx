@@ -4,6 +4,7 @@ import { myProjects } from '../constants'
 type Props = {}
 
 const Projects = (props: Props) => {
+  const currentProjects = myProjects[0]
 
   return (
     <section className='c-space my-20'>
@@ -20,8 +21,22 @@ const Projects = (props: Props) => {
               className='w-10 h-10 shadow-sm'
             />
           </div>
+          
           <div className="flex flex-col gap-5 text-yellow-500 my-5">
             <p className='text-white text-2xl font-semibold animatedText'>{myProjects[0].title}</p>
+            <p className="animatedText">{myProjects[0].desc}</p>
+            <p className="animatedText">{myProjects[0].subdesc}</p>
+
+            <div className="flex items-center justify-between flex-wrap gap-10">
+              <div className="flex items-center gap-6">
+                {currentProjects.tags.map((tag, index) => (
+                  <div key={index} className="tech-logo">
+                    <img src={tag.path} alt={tag.name} />
+                  </div>
+                ))}
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
