@@ -1,10 +1,28 @@
 import React from 'react'
+import { useState } from 'react'
 import { myProjects } from '../constants'
 
 type Props = {}
 
 const Projects = (props: Props) => {
-  const currentProjects = myProjects[0]
+  const upRightArrowIcon = `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLW1vdmUtdXAtcmlnaHQiPjxwYXRoIGQ9Ik0xMyA1SDE5VjExIi8+PHBhdGggZD0iTTE5IDVMNSAxOSIvPjwvc3ZnPg==`
+  const rightArrowIcon = `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWFycm93LXJpZ2h0Ij48cGF0aCBkPSJNNSAxMmgxNCIvPjxwYXRoIGQ9Im0xMiA1IDcgNy03IDciLz48L3N2Zz4=`
+  const leftArrowIcon = `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWFycm93LWxlZnQiPjxwYXRoIGQ9Im0xMiAxOS03LTcgNy03Ii8+PHBhdGggZD0iTTE5IDEySDUiLz48L3N2Zz4=`
+  
+  const projectCount = myProjects.length
+  const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
+  const currentProjects = myProjects[selectedProjectIndex]
+
+  const handleNavigation = (direction:any) => {
+    setSelectedProjectIndex((prevIndex) => {
+      if(direction === 'previous'){
+        return prevIndex === 0 ? projectCount - 1 : prevIndex - 1
+      }
+      else{
+        return prevIndex === projectCount - 1 ? 0 : prevIndex + 1
+      }
+    })
+  }
 
   return (
     <section className='c-space my-20'>
@@ -35,6 +53,26 @@ const Projects = (props: Props) => {
                   </div>
                 ))}
               </div>
+
+              <a href={currentProjects.href} target='_blank' rel='noreferrer'
+              className='border-2 border-rose-500 text-rose-500 bg-gray-800 font-semibold flex items-center gap-2 p-1.5 cursor-pointer'
+              >
+                <p>Check It Out</p>
+                <img src={upRightArrowIcon} alt="upRightArrow" />
+              </a>
+            </div>
+
+            <div className="flex justify-between items-center mt-20">
+                <button className="arrow-btn"
+                  onClick={() => handleNavigation('previous')}
+                >
+                  <img src={leftArrowIcon} alt="left-arrow" className='w-5 h-5' />
+                </button>
+                <button className="arrow-btn"
+                  onClick={() => handleNavigation('next')}
+                >
+                  <img src={rightArrowIcon} alt="right-arrow" className='w-5 h-5' />
+                </button>
             </div>
 
           </div>
